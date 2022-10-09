@@ -1,0 +1,38 @@
+const path = require("path");
+module.exports={
+    context:path.resolve(__dirname,'src'),
+    entry:'./index.tsx',
+    output:{
+        filename:'bundle.js',
+        path:path.resolve(__dirname,'dist')
+    },
+    resolve:{
+      extensions:['.js','.tsx','.ts']
+    },
+    module:{
+        rules:[
+            {
+                test:/\.tsx?/,
+                use:{
+                    loader:'babel-loader',
+                    options:{
+                        presets:[
+                            '@babel/preset-typescript',
+                            '@babel/preset-react',
+                            '@babel/preset-env'
+                        ]
+                    }
+                }
+            },
+            {
+                test:/\.s[ac]ss/,
+                use:[
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader'
+                ]
+            }
+
+        ]
+    }
+}
