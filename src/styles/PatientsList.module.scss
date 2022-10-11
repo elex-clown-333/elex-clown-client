@@ -1,0 +1,45 @@
+.aside{
+  width: 250px;
+  //min-width: 0px;
+  position: relative;
+  height: calc(100vh - 70px);
+  float: left;
+  display: flex;
+  //resize: horizontal;
+  flex-direction: column;
+  overflow:scroll !important;
+  background: hsl(10,50%,95%);
+  //background: #999 !important;
+  //border-right: 2px solid #ccc;
+}
+.patientsList{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:20px;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+.patientsList .patient{
+  width: 90%;
+  border-radius: 10px;
+  background: lightgreen;
+  min-height: 125px;
+}
+@for $i from 1 to 11{
+  .patient{
+    background: hsl(calc($i*(360 / 11)),50%,50%);
+  }
+
+
+}
+.aside::-webkit-scrollbar{
+  width: 0em;
+}
+.aside ul{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
