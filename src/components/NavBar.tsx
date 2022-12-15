@@ -7,6 +7,7 @@ import {useDispatch} from "react-redux";
 const NavBar = () => {
     let dispatch = useDispatch()
     const [query,setQuery] = useState<string>('')
+
     return (
         <nav className={classes.navBar}>
             <div className={classes.icon}>

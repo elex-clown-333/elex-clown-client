@@ -11,18 +11,21 @@ export interface IPropsInput{
 export interface IState{
     isVisible:boolean,
     patients:IPatient[],
+    currentPatient:IPatient | null,
 }
 export interface IPatient extends IFormData{
-    id?:number,
+    id:number,
+    color?:string
 }
 export interface IFormData {
-    name:string,
+    firstName:string,
     lastName:string,
     middleName:string,
     dateOfBirth:string,
 }
 
 export enum ActionTypes{
+    FETCH_UNO_PATIENT='FETCH_UNO_PATIENT',
     FETCH_PATIENT = "FETCH_PATIENT",
     ERROR = "ERROR",
     SET_MODAL = "SET_MODAL",

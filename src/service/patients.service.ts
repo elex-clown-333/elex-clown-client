@@ -7,11 +7,15 @@ export class PatientService{
         return $api.get('/patients')
     }
     static async addPatient(data:IFormData):Promise<AxiosResponse>{
-      return $api.post('/hz',{
-          name:data.name,
+      return $api.post('/patients',{
+          firstName:data.firstName,
           lastName:data.lastName,
           middleName:data.middleName,
-          dateOfBirth:data.dateOfBirth
+          dateOfBirth:data.dateOfBirth,
+          residence: 'Parasha'
       })
+    }
+    static async getPatientById(id:number):Promise<AxiosResponse>{
+        return $api.get(`/patients/${id}`)
     }
 }

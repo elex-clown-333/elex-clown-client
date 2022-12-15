@@ -3,43 +3,219 @@ import {ActionTypes, IAction, IState} from "../types/types";
 let initialState:IState={
     patients:[
         {
-            name:'Bobr',
+            firstName:'Bobr',
             lastName:'Kurwa',
-            middleName:'Bobrovich',
-            dateOfBirth:'0404030'
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:2
         },
         {
-            name:'Bobr',
+            firstName:'Bobr',
             lastName:'Kurwa',
-            middleName:'Bobrovich',
-            dateOfBirth:'0404030'
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:2
         },
         {
-            name:'Bobr',
+            firstName:'Bobr',
             lastName:'Kurwa',
-            middleName:'Bobrovich',
-            dateOfBirth:'0404030'
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:2
         },
         {
-            name:'Bobr',
+            firstName:'Bobr',
             lastName:'Kurwa',
-            middleName:'Bobrovich',
-            dateOfBirth:'0404030'
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:2
         },
         {
-            name:'Bobr',
+            firstName:'Bobr',
             lastName:'Kurwa',
-            middleName:'Bobrovich',
-            dateOfBirth:'0404030'
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:2
         },
         {
-            name:'Bobr',
+            firstName:'Bobr',
             lastName:'Kurwa',
-            middleName:'Bobrovich',
-            dateOfBirth:'0404030'
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:2
+        },
+        {
+            firstName:'Bobr',
+            lastName:'Kurwa',
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:2
+        },
+        {
+            firstName:'Bobr',
+            lastName:'Kurwa',
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:2
+        },
+        {
+            firstName:'Bobr',
+            lastName:'Kurwa',
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:2
+        },
+        {
+            firstName:'Bobr',
+            lastName:'Kurwa',
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:2
+        },
+        {
+            firstName:'Bobr',
+            lastName:'Kurwa',
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:2
+        },
+        {
+            firstName:'Bobr',
+            lastName:'Kurwa',
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:2
+        },
+        {
+            firstName:'Bobr',
+            lastName:'Kurwa',
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:2
+        },
+        {
+            firstName:'Bobr',
+            lastName:'Kurwa',
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:2
         },
 
+        {
+            firstName:'Bobr',
+            lastName:'Kurwa',
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:1
+        },
+        {
+            firstName:'Bobr',
+            lastName:'Kurwa',
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:2
+        },
+        {
+            firstName:'Bobr',
+            lastName:'Kurwa',
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:2
+        },
+        {
+            firstName:'Bobr',
+            lastName:'Kurwa',
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:2
+        },
+        {
+            firstName:'Bobr',
+            lastName:'Kurwa',
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:2
+        },
+        {
+            firstName:'Bobr',
+            lastName:'Kurwa',
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:2
+        },
+        {
+            firstName:'Bobr',
+            lastName:'Kurwa',
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:2
+        },
+        {
+            firstName:'Bobr',
+            lastName:'Kurwa',
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:2
+        },
+        {
+            firstName:'Bobr',
+            lastName:'Kurwa',
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:2
+        },
+        {
+            firstName:'Bobr',
+            lastName:'Kurwa',
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:2
+        },
+        {
+            firstName:'Bobr',
+            lastName:'Kurwa',
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:2
+        },
+        {
+            firstName:'Bobr',
+            lastName:'Kurwa',
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:2
+        },
+        {
+            firstName:'Bobr',
+            lastName:'Kurwa',
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:2
+        },
+        {
+            firstName:'Bobr',
+            lastName:'Kurwa',
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:2
+        },
+        {
+            firstName:'Bobr',
+            lastName:'Kurwa',
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:2
+        },
+
+        {
+            firstName:'Bobr',
+            lastName:'Kurwa',
+            middleName:'Bobrowich',
+            dateOfBirth:'20302.230',
+            id:1
+        },
     ],
+    currentPatient:null,
     isVisible:false,
 }
 export const mainReducer = function(state=initialState,action:IAction):IState{
@@ -49,11 +225,14 @@ export const mainReducer = function(state=initialState,action:IAction):IState{
         case ActionTypes.DELETE_PATIENT:
             return {...state}
         case ActionTypes.ERROR:
+            alert(action.data.message)
             return {...state}
         case ActionTypes.FETCH_PATIENT:
             return {...state,patients:action.data}
         case ActionTypes.SET_MODAL:
             return {...state,isVisible:action.data}
+        case ActionTypes.FETCH_UNO_PATIENT:
+            return {...state,currentPatient:action.data}
         default:
             return state
     }

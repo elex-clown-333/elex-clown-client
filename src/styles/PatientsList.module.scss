@@ -1,25 +1,53 @@
 .aside{
   width: 250px;
-  //min-width: 0px;
-  position: relative;
-  height: calc(100vh - 70px);
+  height:100vh;
   float: left;
+  top:0;
   display: flex;
-  //resize: horizontal;
+  position: fixed;
   flex-direction: column;
   overflow:scroll !important;
   background: hsl(10,50%,95%);
-  //background: #999 !important;
-  //border-right: 2px solid #ccc;
+}
+
+body{
+  height: 200vh;
+}
+.details{
+  cursor:pointer;
+  position: relative;
+}
+.details:after{
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  content:'';
+  width: 100%;
+  height: 1.5px;
+  transition: transform .25s;
+  background: #000;
+  transform: scaleX(0);
+}
+.details:hover:after{
+  transform:scaleX(1)
+}
+
+.patientsList .patient:first-child{
+  margin-top: 70px;
 }
 .patientsList{
+  //overflow: scroll !important;
+  float: left;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap:20px;
   align-items: center;
   width: 100%;
-  margin-top: 20px;
+  margin: 20px 0px;
+}
+.aside{
+  float: left;
 }
 .patientsList .patient{
   width: 90%;
@@ -35,7 +63,7 @@
 
 }
 .aside::-webkit-scrollbar{
-  width: 0em;
+  //width: 0em;
 }
 .aside ul{
   display: flex;

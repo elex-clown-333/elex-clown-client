@@ -1,0 +1,112 @@
+.avatar{
+  width: 100px;
+  height: 100px;
+  background: #000;
+}
+.biography{
+  display: flex;
+  height: auto;
+}
+.scrollToTop{
+  bottom: 50px;
+  right: 50px;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius:50%;
+  background: #eee;
+  display: grid;
+  place-items:center;
+  font-size: 30px;
+  color: #6054ff;
+  opacity: 0;
+  font-weight: bold;
+  transition: all .25s;
+  cursor: pointer;
+  pointer-events: none;
+}
+////.editBtn button:nth-child(2),.editBtn button:last-child{
+////  width: 40%;
+////  height: 60%;
+////  border: none;
+////  display: none;
+////  position: absolute;
+////
+////  transition: all .5s !important;
+////}
+//.editBtn button:first-child{
+//  width: 80%;
+//  height: 60%;
+//  border: none;
+//  //display: none;
+//}
+//.editBtn:hover button:first-child{
+//  //display: none;
+//  margin-right: 20px;
+//
+//}
+//.editBtn:hover button:nth-child(2),.editBtn:hover button:last-child{
+//  display: initial;
+//}
+//.editBtn:hover button:nth-child(2){
+//  right: 5px;
+//}
+//.editBtn:hover{
+//}
+
+
+.scrollToTop.scrolled{
+  animation: scroll .25s forwards;
+}
+html{
+  scroll-behavior: smooth;
+}
+@keyframes scroll {
+  from{
+    transform:translateX(-40px);
+  }
+  to{
+    opacity: 1;
+    pointer-events: initial;
+    transform:translateX(0);
+  }
+}
+.main{
+  box-sizing: border-box;
+}
+
+.scrollToTop:hover{
+  box-shadow: 0px 0px 10px 3px #ccc;
+}
+.biography .editBtn{
+  position:relative;
+  margin-left: auto;
+  width: 150px;
+  margin-top: 10px;
+  margin-right: 10px;
+  height: 80px;
+  transition: gap .25s !important;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background: #999 !important;
+}
+.biography .data{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  gap:10px;
+}
+.data > h4{
+  margin-top: auto;
+}
+.biography .data div{
+  display: flex;
+  gap:50px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

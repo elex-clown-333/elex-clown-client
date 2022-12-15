@@ -4,10 +4,10 @@ import {useTypedSelector} from "../hooks/useTypedSelector";
 import {useActions} from "../hooks/useActions";
 import classes from '../styles/PatientsList.module.scss'
 const PatientsList = () => {
-    const {getPatientsActionCreator} = useActions()
+    const {getPatientsActionCreator,getDataOfPatienActionCreator} = useActions()
     const state = useTypedSelector(state1 => state1.mainReducer)
     useEffect(function(){
-        getPatientsActionCreator()
+        // getPatientsActionCreator()
     },[])
     return (
         <React.Fragment>
@@ -20,22 +20,13 @@ const PatientsList = () => {
                         <div className={classes.patient}>
                             <h1>{patient.name} {patient.lastName} {patient.middleName}</h1>
                             <h3 style={{fontWeight:400}}>{patient.dateOfBirth}</h3>
-                            <a>Детальніше</a>
+                            <a onClick={()=>{
+                                getDataOfPatienActionCreator(patient.id)
+                            }} className={classes.details}>Детальніше</a>
                         </div>
                     )
                 })}
             </div>
-            {/*<ul>*/}
-            {/*{state.patients.map(function(patient) {*/}
-            {/*        return (*/}
-            {/*            <li>{patient.lastName}</li>*/}
-            {/*        )*/}
-            {/*    }*/}
-            {/*)*/}
-            {/*}*/}
-
-            {/*</ul>*/}
-
 
         </div>
         </React.Fragment>

@@ -4,12 +4,14 @@ import classes2 from '../styles/MaterialInput.module.scss'
 import MaterialInput from "./UI/MaterialInput";
 import {ActionTypes, IFormData, IPropsInput} from "../types/types";
 import {useDispatch} from "react-redux";
+import {useActions} from "../hooks/useActions";
 const AddPatientForm = () => {
+    const {addPatientActionCreator} = useActions()
     let [formData,setFormData] = useState<IFormData>({
         dateOfBirth:'',
         middleName:'',
         lastName:'',
-        name:''
+        firstName:''
     })
     let [radios,setRadios] = useState<Array<{color:string}>>([
         {
@@ -37,16 +39,16 @@ const AddPatientForm = () => {
                 <MaterialInput info={{
                     placeholder:'Ім\'я',
                     type:'text',
-                    value:formData.name,
+                    value:formData.firstName,
                     controlFn:(e:ChangeEvent<HTMLInputElement>)=>setFormData({
                         ...formData,
-                        name:e.target.value
+                        firstName:e.target.value
                     })
                 } as IPropsInput}></MaterialInput>
             </div>
             <div className={classes.lastName}>
                 <MaterialInput info={{
-                    placeholder:'Фамілія',
+                    placeholder:'Прізвище',
                     type:'text',
                     value:formData.lastName,
                     controlFn:(e:ChangeEvent<HTMLInputElement>)=>setFormData({
@@ -92,20 +94,18 @@ const AddPatientForm = () => {
 
             </div>
             <button onClick={function(e:MouseEvent<HTMLButtonElement>){
-
-                    e.preventDefault()
+                e.preventDefault()
                 if(Object.values(formData).every(value=>value.length>0)) {
+                    addPatientActionCreator(formData)
+                    console.log('hrin');
 
 
-                    dispatch({
-                        type: ActionTypes.ADD_PATIENT,
-                        data: formData
-                    })
                 }
                 else {
                     new Promise(function(resolve, reject){
                             document.querySelectorAll(`.${classes.form} > div>div input`).forEach(input => {
-                                if (input.value.length == 0) {
+                                //@ts-ignore
+                                if (input?.value.length == 0) {
                                     console.log(';llk')
                                     input.parentElement.classList.add(classes2.shake)
                                 }
@@ -121,12 +121,8 @@ const AddPatientForm = () => {
                     })
 
 
-
-
                 }
-                // document.querySelectorAll(`.${classes.form}>div>div`).forEach(function(div){
-                //     div.classList.remove(classes2.shake)
-                // })
+
 
             }}>Додати</button>
 

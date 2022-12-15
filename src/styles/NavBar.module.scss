@@ -2,6 +2,9 @@
   width: 100% !important;
   height:70px;
   display: grid;
+  position: fixed;
+  top:0;
+  z-index: 1;
   align-items: center;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
