@@ -68,7 +68,6 @@ eApp.post('/', async (req, res) => {
 
     let sql = 'INSERT INTO patients(firstName, middleName, lastName, dateOfBirth, creationDate) VALUES (?, ?, ?, ?, ?)';
 
-
     let id = await new Promise((resolve, reject) => {
         db.run(sql, [
             firstName, middleName, lastName, dateOfBirth,
@@ -83,6 +82,20 @@ eApp.post('/', async (req, res) => {
     });
 
     res.send({patient: {id, ...req.body}})
+})
+
+eApp.put('/:id', (req, res) => {
+    let id = req.params.id;
+    const {firstName, middleName, lastName, dateOfBirth} = req.body
+
+    db.run(
+        'UPDATE patients SET firstName = ?, middleName = ?, lastName = ?, dateOfBirth = ? WHERE id = ?',
+        [
+            firstName, middleName, lastName, dateOfBirth, id
+        ]
+    )
+
+    res.status(204).send()
 })
 
 eApp.listen(port, () => {
