@@ -13,7 +13,7 @@ export interface IState{
     patients:IPatient[],
     currentPatient:IPatient | null,
 }
-export interface IPatient extends IFormData{
+export interface IPatient extends IFormData {
     id:number,
     color?:string
 }

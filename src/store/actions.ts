@@ -6,9 +6,10 @@ export let getPatientsActionCreator = function (){
     return async function(dispatch:Dispatch<IAction>){
         try {
             const response = await PatientService.getPatients()
+            console.log({response})
             dispatch({
                 type: ActionTypes.FETCH_PATIENT,
-                data: response.data
+                data: response
             })
         }
         catch (e) {
@@ -26,7 +27,7 @@ export let getDataOfPatienActionCreator = function(id:number){
             let response = await PatientService.getPatientById(id)
             dispatch({
                 type:ActionTypes.FETCH_UNO_PATIENT,
-                data:response.data
+                data:response
             })
         }
         catch(e){
@@ -45,7 +46,7 @@ export let addPatientActionCreator = function(data:IFormData){
             console.log('huy')
             dispatch({
                 type:ActionTypes.ADD_PATIENT,
-                data:response.data
+                data:response
             })
             console.log('dispatched');
         } catch (e) {

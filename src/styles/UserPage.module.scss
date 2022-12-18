@@ -105,8 +105,19 @@ html{
   gap:50px;
 }
 
+* {
+
+}
+
+@font-face {
+  font-family: HueFont;
+  //src: url("../../AvenirNextLTPro-Regular.otf") format("opentype");
+  src: url("../../AvenirLTStd-Roman.otf") format("opentype");
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: HueFont, serif !important;
 }
