@@ -1,14 +1,18 @@
 .form{
   width: 500px;
   height: 500px;
-
+  background: #f8f8f8 !important;
+}
+.editBtn button:first-child{
+  width: 100px !important;
+  height: 50px !important;
 }
 .layOut{
   background: rgba(0,0,0,0.4);
   width: 100vw;
   height: 100vh;
   left: 0;
-  z-index: 2;
+  z-index: 3;
   right: 0;
   bottom: 0;
   top: 0;
@@ -17,6 +21,7 @@
   justify-content: center;
   align-items: center;
 }
+
 @keyframes scale {
   20%{
     transform: scale(1.075);
@@ -34,6 +39,7 @@
     transform:scale(1);
   }
 }
+
 .radiosColors{
   display: flex;
   gap:10px;

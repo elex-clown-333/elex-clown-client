@@ -2,20 +2,53 @@ import React, {FC, useEffect, useState} from 'react'
 import classes from '../styles/UserPage.module.scss'
 import axios from "axios";
 import {useTypedSelector} from "../hooks/useTypedSelector";
+import {useDispatch} from "react-redux";
+import {ActionTypes, IPatient} from "../types/types";
+import {useActions} from "../hooks/useActions";
 const UserPage:FC=()=>{
+    let {updatePatientActionCreator} = useActions()
     let[src,setSrc] = useState<string>('')
-    const currentPatient = useTypedSelector(state => state.mainReducer.currentPatient)
+    let focused = useTypedSelector(state => state.mainReducer.focused)
 
+    const currentPatient = useTypedSelector(state => state.mainReducer.currentPatient)
+    const [patrick, setPatrick] = useState<IPatient>(null);
+    // let[focused,setFocused] = useState<boolean>(null)
+    let dispatch = useDispatch()
     useEffect(()=>{
+
         // axios.get('https://jsonplaceholder.typicode.com/photos/1').then(response=>{
         //     setSrc(response.data.url)
         // })
 
-
         window.addEventListener('scroll',function(e){
             window.scrollY > 150 ? document.querySelector(`.${classes.scrollToTop}`).classList.add(classes.scrolled): document.querySelector(`.${classes.scrollToTop}`).classList.remove(classes.scrolled)
         })
+
     },[])
+
+    const [save,setSave] = useState<boolean>(null)
+
+    useEffect(() => {
+
+        setPatrick(currentPatient)
+
+    }, [currentPatient])
+
+    useEffect(()=>{
+        console.log(focused)
+    })
+
+
+    useEffect(()=>{
+        if(currentPatient && !focused && !save)  {
+            document.querySelector(`.${classes.data} h2:first-child`).textContent = Object.values(currentPatient).slice(1, 4).join(' ')
+            document.querySelector(`.${classes.data} > div h4:first-child div`).textContent = currentPatient.dateOfBirth
+            document.querySelector(`.${classes.data} > div h4:last-child div`).textContent = currentPatient.residence
+        }
+
+    },[focused])
+
+
     return (
         <>
             <div style={{marginLeft: 270, marginTop: 80, marginRight: 20}} className={classes.main}>
@@ -23,65 +56,63 @@ const UserPage:FC=()=>{
                     <>
                         <div className={classes.biography}>
                             <div style={{flexShrink: 0}} className={classes.avatar}>
-
+                                <img src={'https://cdn1.vectorstock.com/i/1000x1000/58/30/patient-broken-arm-avatar-filled-outline-icon-vector-22675830.jpg'}/>
                             </div>
                             <div className={classes.data}>
-                                <h2>{currentPatient.firstName} {currentPatient.middleName} {currentPatient.lastName}</h2>
+                                <h2 className={classes.enclosed} contentEditable={focused ? true : false}>{patrick?.lastName} {patrick?.firstName} {patrick?.middleName}</h2>
                                 <div>
-                                    <h4>Date of birth: 69.69.6969</h4>
-                                    <h4>Residence: Huevo-Kukuevo 32 st.</h4>
+                                    <h4 style={{display:'flex'}}>Date of birth: <div contentEditable={focused ? true : false} className={classes.enclosed}>{patrick?.dateOfBirth}</div></h4>
+                                    <h4 style={{display:'flex'}}>Residence: <div style={{
+                                        overflow:'hidden !important',
+                                        whiteSpace:'nowrap',
+                                        textOverflow:'ellipsis'
+                                    }} contentEditable={focused ? true : false} className={classes.enclosed}>{patrick?.residence}</div></h4>
                                 </div>
-                                <h4>Appointment date: 29.228.14888</h4>
+                                <h4 style={{display:'flex'}}>Appointment date: <div contentEditable={focused ? true : false} className={classes.enclosed}>29.2934.1488</div></h4>
                             </div>
-                            <div className={classes.editBtn}>
-                                <button>Edit</button>
-                                <button>Cancel</button>
-                                {/*<button>Save</button>*/}
+                            <div className={focused ? classes.editBtn + ' ' + classes.focused : classes.editBtn}>
+                                <button onClick={()=>{
+                                    dispatch({
+                                        type:ActionTypes.SET_FOCUSED,
+                                        data:true
+                                    })
+                                    // document.querySelectorAll(`.${classes.enclosed}`).forEach(function(field){
+                                    //     field.setAttribute('contentEditable','true')
+                                    //     console.log('sdlfkj')
+                                    // })
+                                }}><span>Edit</span></button>
+                                <button onClick={()=>{
+                                    dispatch({
+                                        type:ActionTypes.SET_FOCUSED,
+                                        data:false
+                                    })
+                                    setSave(false)
+                                }} className={classes.cancelBtn}><span><i className='bx bx-x'></i>Cancel</span></button>
+                                <button onClick={()=>{
+                                    // @ts-ignore
+                                    updatePatientActionCreator({
+                                        residence:document.querySelector(`.${classes.data} > div > h4:last-child div`).textContent,
+                                        dateOfBirth:document.querySelector(`.${classes.data} > div > h4:first-child div`).textContent,
+                                        firstName: document.querySelector(`.${classes.data} h2`).textContent.split(' ')[1],
+                                        id: currentPatient.id,
+                                        lastName: document.querySelector(`.${classes.data} h2`).textContent.split(' ')[0],
+                                        middleName: document.querySelector(`.${classes.data} h2`).textContent.split(' ')[2],
+                                        // @ts-ignore
+                                        protocol: document.querySelector('#protoahaha').innerText
+                                    })
+                                    // updatePatientActionCreator(patrick)
+                                    dispatch({
+                                        type:ActionTypes.SET_FOCUSED,
+                                        data:false
+                                    })
+                                    setSave(true)
+                                }} className={classes.saveBtn}><i className='bx bx-download'></i><span>Save</span></button>
 
                             </div>
                         </div>
-                        <p style={{marginTop: 20}}>
-                            <h3>Protocol</h3>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi, delectus dolor ducimus eos
-                            est eum, illo impedit labore, minus perspiciatis qui quibusdam quis quos ratione rerum suscipit.
-                            Aut ducimus ea esse necessitatibus obcaecati officiis porro quidem tempora vero? Consectetur
-                            dolores eos facere incidunt laborum nesciunt numquam porro, praesentium quia quis rem
-                            reprehenderit sequi soluta vitae voluptates. Accusantium blanditiis culpa dolorum ducimus id
-                            magni obcaecati quas sunt? Accusamus aliquam architecto assumenda corporis distinctio dolore
-                            dolores eligendi eos esse eveniet, exercitationem expedita fuga id iure magnam magni nemo nihil
-                            officiis possimus quasi qui quia quidem sit tenetur voluptatem! Asperiores assumenda aut, autem,
-                            blanditiis cupiditate dolor ea eos est eum facere fuga harum illo inventore laboriosam magni
-                            maiores maxime nemo nesciunt nobis omnis possimus reiciendis, rem suscipit totam vitae
-                            voluptates voluptatibus voluptatum! Ad aspernatur blanditiis id incidunt iure magnam nobis quae
-                            sequi velit! Assumenda at consequatur cumque dolores dolorum est et exercitationem fugiat, hic,
-                            ipsum iste labore maiores maxime molestiae quis ratione reiciendis sed sit suscipit velit. Alias
-                            animi cumque debitis deserunt, dolore doloremque, ea eius enim eum ex fugiat fugit harum
-                            incidunt iste magnam molestiae obcaecati officia omnis pariatur qui repellendus sapiente, sed
-                            sequi sit velit veritatis voluptas! Enim et odit quo ut veritatis! Doloremque error eum ipsam
-                            nesciunt nobis reprehenderit voluptatibus. Aut cum explicabo id possimus repellat repudiandae
-                            tenetur! Accusantium dignissimos expedita iusto quos suscipit? Atque dignissimos fuga itaque
-                            iure molestias porro suscipit? Adipisci architecto assumenda at atque cumque dolorem earum
-                            eligendi expedita explicabo facere ipsam itaque magnam minus modi nam nemo non numquam officiis,
-                            possimus provident quaerat quas quos sapiente sequi similique sint suscipit, velit voluptates
-                            voluptatibus voluptatum? Aspernatur beatae eum maxime modi porro quae quam tempora ullam.
-                            Consectetur distinctio dolor error eum incidunt, magnam natus nulla perspiciatis quod, saepe
-                            suscipit, tenetur vitae voluptates. A aperiam aut cum deleniti et eum ipsa ipsam itaque minus
-                            natus odit, perspiciatis porro quia recusandae rerum suscipit voluptates! Accusamus aliquid amet
-                            consequatur delectus dignissimos, distinctio doloremque dolorum eos excepturi facere fugit ipsa
-                            iure iusto laboriosam magnam natus officia placeat praesentium quasi ratione sit sunt ullam ut
-                            veniam voluptatum! Ducimus error laboriosam nemo omnis rem repellat sit. Distinctio doloribus
-                            eius et excepturi id itaque laborum sunt. Amet architecto corporis culpa, cupiditate deleniti,
-                            doloribus et facilis hic, illo incidunt ipsum iure nesciunt non quo voluptates! A aperiam at cum
-                            debitis deleniti distinctio, dolorem ducimus eos esse et fuga hic incidunt inventore iste, minus
-                            natus necessitatibus possimus quisquam quod recusandae reiciendis repellendus saepe sed
-                            temporibus ullam velit veritatis voluptatum? Accusantium ad amet aspernatur consequuntur,
-                            debitis ducimus ea eius eligendi eos harum in incidunt ipsa laboriosam minima nisi nulla omnis
-                            pariatur quae quisquam repellat repudiandae sint voluptatibus voluptatum! Alias aliquid
-                            architecto assumenda aut earum est exercitationem facilis harum in iusto minima minus odio quas
-                            quasi quis ratione, repudiandae veniam voluptatum. Ab accusamus adipisci alias aliquam aliquid
-                            amet cum eveniet excepturi exercitationem expedita, explicabo fugit, illum iure laudantium magni
-                            molestias nemo numquam officiis perferendis quidem quo sed sint sunt suscipit tempora temporibus
-                            totam ullam velit voluptatem voluptates. Aliquam!
+                        <p contentEditable={focused} id={'protoahaha'} style={{marginTop: 20}}>
+                            <h3 contentEditable={false}>Protocol</h3>
+                            {currentPatient.protocol}
                         </p>
 
 
@@ -91,7 +122,7 @@ const UserPage:FC=()=>{
             <div onClick={e => {
                 scrollTo(0, 0);
             }} className={classes.scrollToTop}>
-                <span>^</span>
+                <span><i className='bx bx-up-arrow-alt'></i></span>
             </div>
         </>
     )

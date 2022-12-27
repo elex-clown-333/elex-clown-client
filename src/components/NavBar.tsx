@@ -7,7 +7,16 @@ import {useDispatch} from "react-redux";
 const NavBar = () => {
     let dispatch = useDispatch()
     const [query,setQuery] = useState<string>('')
-
+    useEffect(()=>{
+        dispatch({
+            type:ActionTypes.SEARCHING_PATIENT,
+            data:query
+        })
+        // if(query.length == 0){
+        //
+        // }
+        console.log('sd;fkjl')
+    },[query])
     return (
         <nav className={classes.navBar}>
             <div className={classes.icon}>

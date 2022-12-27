@@ -8,6 +8,7 @@ import {useActions} from "../hooks/useActions";
 const AddPatientForm = () => {
     const {addPatientActionCreator} = useActions()
     let [formData,setFormData] = useState<IFormData>({
+        residence: "",
         dateOfBirth:'',
         middleName:'',
         lastName:'',
@@ -79,19 +80,16 @@ const AddPatientForm = () => {
                     })
                 } as IPropsInput}></MaterialInput>
             </div>
-            <div className={classes.radiosColors}>
-                <span>Колір</span>
-               <div className={classes.radios}> {
-                    radios.map(radio=>{
-                        return (
-                            <input style={{
-                                accentColor:radio.color
-                            }} name={'colors'} type={"radio"}/>
-                        )
+            <div className={classes.residence}>
+                <MaterialInput info={{
+                    placeholder:'Місце проживання',
+                    type:'text',
+                    value:formData.residence,
+                    controlFn:(e:ChangeEvent<HTMLInputElement>)=>setFormData({
+                        ...formData,
+                        residence:e.target.value
                     })
-                }
-               </div>
-
+                } as IPropsInput}></MaterialInput>
             </div>
             <button onClick={function(e:MouseEvent<HTMLButtonElement>){
                 e.preventDefault()
@@ -99,14 +97,12 @@ const AddPatientForm = () => {
                     addPatientActionCreator(formData)
                     console.log('hrin');
 
-
                 }
                 else {
                     new Promise(function(resolve, reject){
                             document.querySelectorAll(`.${classes.form} > div>div input`).forEach(input => {
                                 //@ts-ignore
                                 if (input?.value.length == 0) {
-                                    console.log(';llk')
                                     input.parentElement.classList.add(classes2.shake)
                                 }
                             })
@@ -119,11 +115,7 @@ const AddPatientForm = () => {
                             input.parentElement.classList.remove(classes2.shake)
                         })
                     })
-
-
                 }
-
-
             }}>Додати</button>
 
         </form>

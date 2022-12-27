@@ -10,21 +10,27 @@ export interface IPropsInput{
 }
 export interface IState{
     isVisible:boolean,
+    focused?:null | boolean,
     patients:IPatient[],
     currentPatient:IPatient | null,
 }
 export interface IPatient extends IFormData {
     id:number,
-    color?:string
+    color?:string,
+    protocol: string
 }
 export interface IFormData {
     firstName:string,
     lastName:string,
     middleName:string,
     dateOfBirth:string,
+    residence:string,
 }
 
 export enum ActionTypes{
+    SEARCHING_PATIENT="SEARCHING_PATIENT",
+    UPDATE_PATIENT="UPDATE_PATIENT",
+    SET_FOCUSED="SET_FOCUSED",
     FETCH_UNO_PATIENT='FETCH_UNO_PATIENT',
     FETCH_PATIENT = "FETCH_PATIENT",
     ERROR = "ERROR",

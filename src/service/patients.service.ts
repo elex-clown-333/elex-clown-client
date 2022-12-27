@@ -7,11 +7,13 @@ export class PatientService{
         return (await $api.get('/')).data.patients
     }
     static async addPatient(data:IFormData): Promise<IPatient>{
+        console.log('service yobaniy',data.residence)
         return (await $api.post('/',{
             firstName:data.firstName,
             lastName:data.lastName,
             middleName:data.middleName,
             dateOfBirth:data.dateOfBirth,
+            residence:data.residence
         })).data.patient
       // return $api.post('/patients',{
       //     firstName:data.firstName,
@@ -23,5 +25,15 @@ export class PatientService{
     }
     static async getPatientById(id:number):Promise<IPatient>{
         return (await $api.get("/" + id)).data.patient
+    }
+    static async updatePatientData(data:IPatient):Promise<AxiosResponse>{
+        return $api.put("/" + data.id,{
+            firstName:data.firstName,
+            middleName:data.middleName,
+            lastName:data.lastName,
+            dateOfBirth:data.dateOfBirth,
+            residence:data.residence,
+            protocol: data.protocol
+        })
     }
 }
