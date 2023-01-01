@@ -3,25 +3,39 @@ import {useDispatch, useSelector} from "react-redux";
 import {useTypedSelector} from "../hooks/useTypedSelector";
 import {useActions} from "../hooks/useActions";
 import classes from '../styles/PatientsList.module.scss'
-import {ActionTypes} from "../types/types";
+import {ActionTypes, IPatient} from "../types/types";
 const PatientsList = () => {
     const {getPatientsActionCreator,getDataOfPatienActionCreator} = useActions()
 
     const state = useTypedSelector(state1 => state1.mainReducer)
+
+    const [patients, setPatients] = useState<IPatient[]>([]);
+
     let dispatch = useDispatch()
+
     useEffect(function(){
         getPatientsActionCreator()
     },[])
+
+    useEffect(() => {
+        setPatients(state.patients)
+    }, [state.patients])
+
+    useEffect(() => {
+        setPatients(state.patients.filter(patient => {
+            return patient.lastName.toLowerCase().includes(state.query)
+        }))
+    }, [state.query])
     return (
         <React.Fragment>
             <div style={{
                 overflow:'scroll'
             }} className={classes.aside} id={'aside'}>
                 <div className={classes.patientsList}>
-                    {state.patients.length ? (<>{state.patients.map(function(patient){
+                    {patients.length ? (<>{patients.map(function(patient){
                             return (
                                 <div className={classes.patient}>
-                                    <h1>{patient.firstName} {patient.lastName} {patient.middleName}</h1>
+                                    <h1>{patient.lastName} {patient.firstName} {patient.middleName}</h1>
                                     <h3 style={{fontWeight:400}}>{patient.dateOfBirth}</h3>
                                     <a onClick={()=>{
                                         getDataOfPatienActionCreator(patient.id)

@@ -12,6 +12,7 @@ export interface IState{
     isVisible:boolean,
     focused?:null | boolean,
     patients:IPatient[],
+    query: string,
     currentPatient:IPatient | null,
 }
 export interface IPatient extends IFormData {

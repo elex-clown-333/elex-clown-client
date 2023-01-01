@@ -41,11 +41,10 @@ const UserPage:FC=()=>{
 
     useEffect(()=>{
         if(currentPatient && !focused && !save)  {
-            document.querySelector(`.${classes.data} h2:first-child`).textContent = Object.values(currentPatient).slice(1, 4).join(' ')
+            document.querySelector(`.${classes.data} h2:first-child`).textContent = `${currentPatient?.lastName} ${currentPatient?.firstName} ${currentPatient?.middleName}`
             document.querySelector(`.${classes.data} > div h4:first-child div`).textContent = currentPatient.dateOfBirth
             document.querySelector(`.${classes.data} > div h4:last-child div`).textContent = currentPatient.residence
         }
-
     },[focused])
 
 
@@ -98,7 +97,7 @@ const UserPage:FC=()=>{
                                         lastName: document.querySelector(`.${classes.data} h2`).textContent.split(' ')[0],
                                         middleName: document.querySelector(`.${classes.data} h2`).textContent.split(' ')[2],
                                         // @ts-ignore
-                                        protocol: document.querySelector('#protoahaha').innerText
+                                        protocol: document.querySelector('#protoahaha').innerText.replace('Protocol', '')
                                     })
                                     // updatePatientActionCreator(patrick)
                                     dispatch({

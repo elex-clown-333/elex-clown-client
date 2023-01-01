@@ -15,7 +15,7 @@ const NavBar = () => {
         // if(query.length == 0){
         //
         // }
-        console.log('sd;fkjl')
+        // console.log(`DFFD ${query}`)
     },[query])
     return (
         <nav className={classes.navBar}>
