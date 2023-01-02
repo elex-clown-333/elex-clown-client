@@ -31,7 +31,10 @@ db.run('CREATE TABLE IF NOT EXISTS patients(id INTEGER PRIMARY KEY, firstName te
 });
 
 eApp.use(bodyParser.json())
-
+eApp.use(bodyParser.raw({
+    type:['image/jpeg', 'image/png'],
+    limit:'10mb'
+}))
 eApp.use(function(err, req, res, next) {
     console.error(err.stack);
     res.status(500).send({error: 'Something broke!!!!'});
@@ -63,6 +66,7 @@ eApp.get('/:id', async (req, res) => {
 })
 
 eApp.post('/', async (req, res) => {
+    console.log(`BLYAAA ${req.body.source}`)
     const {firstName, middleName, lastName, dateOfBirth,residence} = req.body
 
     let sql = 'INSERT INTO patients(firstName, middleName, lastName, dateOfBirth, creationDate,residence, protocol) VALUES (?, ?, ?, ?, ?, ?, ?)';
@@ -109,6 +113,7 @@ app.on('ready',async function(){
             minWidth:760,
             minHeight:572,
         })
+        mainWindow.setOverlayIcon('./src/assets/med_logo.jpeg')
         await mainWindow.loadFile('./public/index.html')
 
         // crashReporter.start({

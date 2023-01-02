@@ -13,7 +13,8 @@ export class PatientService{
             lastName:data.lastName,
             middleName:data.middleName,
             dateOfBirth:data.dateOfBirth,
-            residence:data.residence
+            residence:data.residence,
+            source:data?.source
         })).data.patient
       // return $api.post('/patients',{
       //     firstName:data.firstName,

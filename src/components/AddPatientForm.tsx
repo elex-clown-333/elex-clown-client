@@ -12,7 +12,7 @@ const AddPatientForm = () => {
         dateOfBirth:'',
         middleName:'',
         lastName:'',
-        firstName:''
+        firstName:'',
     })
     let [radios,setRadios] = useState<Array<{color:string}>>([
         {
@@ -36,6 +36,7 @@ const AddPatientForm = () => {
         <form onClick={function(e:MouseEvent<HTMLFormElement>){
             e.stopPropagation()
         }} className={classes.form}>
+            <h2>Створення пацієнта</h2>
             <div className={classes.firstName}>
                 <MaterialInput info={{
                     placeholder:'Ім\'я',
@@ -71,7 +72,7 @@ const AddPatientForm = () => {
             </div>
             <div className={classes.dateOfBirth}>
                 <MaterialInput info={{
-                    placeholder:'Дата народження',
+                    // placeholder:'Дата народження',
                     type:'date',
                     value:formData.dateOfBirth,
                     controlFn:(e:ChangeEvent<HTMLInputElement>)=>setFormData({
@@ -91,12 +92,14 @@ const AddPatientForm = () => {
                     })
                 } as IPropsInput}></MaterialInput>
             </div>
-            <button onClick={function(e:MouseEvent<HTMLButtonElement>){
+            <button className={classes.addPatientBtn} onClick={function(e:MouseEvent<HTMLButtonElement>){
                 e.preventDefault()
                 if(Object.values(formData).every(value=>value.length>0)) {
                     addPatientActionCreator(formData)
-                    console.log('hrin');
-
+                    dispatch({
+                        type:ActionTypes.SET_MODAL,
+                        data:false
+                    })
                 }
                 else {
                     new Promise(function(resolve, reject){
@@ -116,7 +119,7 @@ const AddPatientForm = () => {
                         })
                     })
                 }
-            }}>Додати</button>
+            }}><div>Додати</div><span>+</span></button>
 
         </form>
         </div>

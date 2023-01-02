@@ -26,6 +26,7 @@ export interface IFormData {
     middleName:string,
     dateOfBirth:string,
     residence:string,
+    source?:string
 }
 
 export enum ActionTypes{

@@ -5,6 +5,7 @@ import {useTypedSelector} from "../hooks/useTypedSelector";
 import {useDispatch} from "react-redux";
 import {ActionTypes, IPatient} from "../types/types";
 import {useActions} from "../hooks/useActions";
+import ModalWindow from "../components/UI/ModalWindow";
 const UserPage:FC=()=>{
     let {updatePatientActionCreator} = useActions()
     let[src,setSrc] = useState<string>('')
@@ -37,7 +38,7 @@ const UserPage:FC=()=>{
     useEffect(()=>{
         console.log(focused)
     })
-
+    let[isVisible,setIsVisible] = useState<boolean>(false)
 
     useEffect(()=>{
         if(currentPatient && !focused && !save)  {
@@ -50,6 +51,15 @@ const UserPage:FC=()=>{
 
     return (
         <>
+            {/*@ts-ignore*/}
+            {isVisible && <ModalWindow fn={()=>{
+                dispatch({
+                    type:ActionTypes.SET_FOCUSED,
+                    data:false
+                })
+                setSave(false)
+                setIsVisible(false)
+            }} isVisible={isVisible} setIsVisible={setIsVisible}/>}
             <div style={{marginLeft: 270, marginTop: 80, marginRight: 20}} className={classes.main}>
                 {currentPatient ? (
                     <>
@@ -60,12 +70,8 @@ const UserPage:FC=()=>{
                             <div className={classes.data}>
                                 <h2 className={classes.enclosed} contentEditable={focused ? true : false}>{patrick?.lastName} {patrick?.firstName} {patrick?.middleName}</h2>
                                 <div>
-                                    <h4 style={{display:'flex'}}>Date of birth: <div contentEditable={focused ? true : false} className={classes.enclosed}>{patrick?.dateOfBirth}</div></h4>
-                                    <h4 style={{display:'flex'}}>Residence: <div style={{
-                                        overflow:'hidden !important',
-                                        whiteSpace:'nowrap',
-                                        textOverflow:'ellipsis'
-                                    }} contentEditable={focused ? true : false} className={classes.enclosed}>{patrick?.residence}</div></h4>
+                                    <h4 style={{display:'flex',}}>Date of birth:<div contentEditable={focused ? true : false} className={classes.enclosed}>      {patrick?.dateOfBirth}</div></h4>
+                                    <h4 style={{width:100,height:50,display:'flex',flexShrink:0,whiteSpace:'nowrap',overflow:'hidden',textOverflow:'ellipsis'}}>Residence: <div contentEditable={focused ? true : false} className={classes.enclosed}>{patrick?.residence}</div></h4>
                                 </div>
                                 <h4 style={{display:'flex'}}>Appointment date: <div contentEditable={focused ? true : false} className={classes.enclosed}>29.2934.1488</div></h4>
                             </div>
@@ -81,14 +87,13 @@ const UserPage:FC=()=>{
                                     // })
                                 }}><span>Edit</span></button>
                                 <button onClick={()=>{
-                                    dispatch({
-                                        type:ActionTypes.SET_FOCUSED,
-                                        data:false
-                                    })
-                                    setSave(false)
+                                    setIsVisible(true)
+
+
                                 }} className={classes.cancelBtn}><span><i className='bx bx-x'></i>Cancel</span></button>
                                 <button onClick={()=>{
                                     // @ts-ignore
+
                                     updatePatientActionCreator({
                                         residence:document.querySelector(`.${classes.data} > div > h4:last-child div`).textContent,
                                         dateOfBirth:document.querySelector(`.${classes.data} > div > h4:first-child div`).textContent,
@@ -97,7 +102,7 @@ const UserPage:FC=()=>{
                                         lastName: document.querySelector(`.${classes.data} h2`).textContent.split(' ')[0],
                                         middleName: document.querySelector(`.${classes.data} h2`).textContent.split(' ')[2],
                                         // @ts-ignore
-                                        protocol: document.querySelector('#protoahaha').innerText.replace('Protocol', '')
+                                        protocol: document.querySelector('#protoahaha').innerText
                                     })
                                     // updatePatientActionCreator(patrick)
                                     dispatch({
@@ -109,10 +114,13 @@ const UserPage:FC=()=>{
 
                             </div>
                         </div>
-                        <p contentEditable={focused} id={'protoahaha'} style={{marginTop: 20}}>
-                            <h3 contentEditable={false}>Protocol</h3>
+                        <div style={{marginTop: 20}}>
+                            <h3>Protocol</h3>
+                            <p style={focused ? {borderRadius:5,border:'2px solid #ccc',outline:'none',transition:'all'} : {borderRadius:0}} contentEditable={focused} id={'protoahaha'}>
                             {currentPatient.protocol}
                         </p>
+
+                        </div>
 
 
                     </>

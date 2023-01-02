@@ -9,6 +9,20 @@
   overflow:scroll !important;
   background: hsl(10,50%,95%);
 }
+.patient.active{
+  background: #000 !important;
+}
+.deleteBtn{
+  position: absolute;
+  width: 60px;
+  height: 20px;
+  background: #fff;
+  opacity:0;
+  transition: opacity .5s;
+  &.delActive{
+    opacity: 1;
+  }
+}
 
 body{
   height: 200vh;

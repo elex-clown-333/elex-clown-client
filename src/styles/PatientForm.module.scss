@@ -3,6 +3,47 @@
   height: 500px;
   background: #f8f8f8 !important;
 }
+.addPatientBtn{
+  width: 120px;
+  border-radius: 5px;
+
+  height: 40px;
+  cursor:pointer;
+  background: yellowgreen;
+  border: none;
+  position: relative;
+  overflow:hidden;
+  transition: all .25s;
+  box-shadow: 0 5px 0 0 adjust-color(yellowgreen,$lightness:20%);
+  &:active{
+    margin-top: 2px;
+    box-shadow: 0 3px 0 0 adjust-color(yellowgreen,$lightness:20%);
+
+  }
+  &:hover{
+    div{
+      margin-right: 20px;
+    }
+    span{
+      transform: translateY(-50%);
+    }
+  }
+  div{
+    transition: all .25s;
+    color: #fff;
+
+  }
+  span{
+    color: #fff;
+
+    transition: all .25s;
+    position: absolute;
+    top:50%;
+    font-size: 20px;
+    right: 20px;
+    transform:translateY(calc(-50% - 30px));
+  }
+}
 .editBtn button:first-child{
   width: 100px !important;
   height: 50px !important;

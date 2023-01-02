@@ -42,6 +42,7 @@ export let getDataOfPatienActionCreator = function(id:number){
 export let addPatientActionCreator = function(data:IFormData){
     return async function(dispatch:Dispatch<IAction>){
         try{
+            console.log('dataaa',data)
             let response = await PatientService.addPatient(data)
             dispatch({
                 type:ActionTypes.ADD_PATIENT,
