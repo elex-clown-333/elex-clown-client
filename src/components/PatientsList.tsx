@@ -6,7 +6,7 @@ import classes from '../styles/PatientsList.module.scss'
 import {ActionTypes, IPatient} from "../types/types";
 import ModalWindow from "./UI/ModalWindow";
 const PatientsList = () => {
-    const {getPatientsActionCreator,getDataOfPatienActionCreator} = useActions()
+    const {getPatientInferencesActionCreator,getPatientsActionCreator,getDataOfPatienActionCreator} = useActions()
 
     const state = useTypedSelector(state1 => state1.mainReducer)
 
@@ -17,6 +17,7 @@ const PatientsList = () => {
     let [idx,setIdx] = useState<number>(null)
     useEffect(function(){
         getPatientsActionCreator()
+
     },[])
 
     useEffect(() => {
@@ -45,7 +46,7 @@ const PatientsList = () => {
                 overflow:'scroll'
             }} className={classes.aside} id={'aside'}>
                 <div className={classes.patientsList}>
-                    {patients.length ? (<>{patients.map(function(patient,index){
+                    {patients?.length ? (<>{patients.map(function(patient,index){
                             return (
                                 <>
                                     {/*@ts-ignore*/}
@@ -67,6 +68,7 @@ const PatientsList = () => {
                                         }
                                         else {
                                             getDataOfPatienActionCreator(patient.id)
+                                            getPatientInferencesActionCreator(patient.id)
                                             dispatch({
                                                 type:ActionTypes.SET_FOCUSED,
                                                 data:false

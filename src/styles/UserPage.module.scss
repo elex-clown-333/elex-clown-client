@@ -178,6 +178,45 @@ html{
   transition: all .25s;
   cursor: pointer;
 }
+.conclusionsList{
+  margin-top: 15px;
+  display: flex;
+  gap:15px;
+  flex-direction: column;
+  >div{
+    width: 200px;
+    background:hsl(115,54%,76%);
+    height: 50px;
+    cursor: pointer;
+    border-radius: 7px;
+    box-shadow: 0 5px 0 0 hsl(115,54%,66%) ;
+    display: grid;
+    transition: all .25s;
+    place-items: center;
+    &:active{
+      transform:translateY(2px);
+      box-shadow: 0 3px 0 0 hsl(115,54%,66%) ;
+    }
+  }
+}
+.inference{
+  width: 150px;
+  height: 40px;
+  background: hsl(80,50%,50%);
+  box-shadow: 0 5px 0 0 hsl(80,50%,40%);
+  border:unset;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .25s;
+  cursor: pointer;
+  border-radius: 5px;
+  &:active{
+    transform:translateY(2px);
+    box-shadow: 0 3px 0 0 hsl(80,50%,40%);
+  }
+}
 .editBtn button:last-child i{
   font-size: 20px;
   transform: translate(calc(-50% - 40px),-50%);
@@ -213,10 +252,8 @@ html{
 
 .biography .editBtn{
   position:relative;
-  margin-left: auto;
   width: 150px;
   margin-top: 10px;
-  margin-right: 10px;
   height: 80px;
   flex-shrink: 0;
   transition: gap .25s !important;

@@ -7,10 +7,10 @@ import {ActionTypes, IPatient} from "../types/types";
 import {useActions} from "../hooks/useActions";
 import ModalWindow from "../components/UI/ModalWindow";
 const UserPage:FC=()=>{
-    let {updatePatientActionCreator} = useActions()
+    let {updatePatientActionCreator,getPatientInferenceByIdActionCreator} = useActions()
     let[src,setSrc] = useState<string>('')
     let focused = useTypedSelector(state => state.mainReducer.focused)
-
+    let state = useTypedSelector(state1 => state1.mainReducer)
     const currentPatient = useTypedSelector(state => state.mainReducer.currentPatient)
     const [patrick, setPatrick] = useState<IPatient>(null);
     // let[focused,setFocused] = useState<boolean>(null)
@@ -71,9 +71,16 @@ const UserPage:FC=()=>{
                                 <h2 className={classes.enclosed} contentEditable={focused ? true : false}>{patrick?.lastName} {patrick?.firstName} {patrick?.middleName}</h2>
                                 <div>
                                     <h4 style={{display:'flex',}}>Date of birth:<div contentEditable={focused ? true : false} className={classes.enclosed}>      {patrick?.dateOfBirth}</div></h4>
-                                    <h4 style={{width:100,height:50,display:'flex',flexShrink:0,whiteSpace:'nowrap',overflow:'hidden',textOverflow:'ellipsis'}}>Residence: <div contentEditable={focused ? true : false} className={classes.enclosed}>{patrick?.residence}</div></h4>
+                                    <h4 style={{display:'flex'}}>Residence: <div contentEditable={focused ? true : false} className={classes.enclosed}>{patrick?.residence}</div></h4>
                                 </div>
-                                <h4 style={{display:'flex'}}>Appointment date: <div contentEditable={focused ? true : false} className={classes.enclosed}>29.2934.1488</div></h4>
+                                <button onClick={()=>{
+                                    dispatch({
+                                        type:ActionTypes.SET_INFERENCE_WINDOW,
+                                        data:true
+                                    })
+                                }} className={classes.inference}>
+                                    <div>Додати заключення</div>
+                                </button>
                             </div>
                             <div className={focused ? classes.editBtn + ' ' + classes.focused : classes.editBtn}>
                                 <button onClick={()=>{
@@ -101,8 +108,6 @@ const UserPage:FC=()=>{
                                         id: currentPatient.id,
                                         lastName: document.querySelector(`.${classes.data} h2`).textContent.split(' ')[0],
                                         middleName: document.querySelector(`.${classes.data} h2`).textContent.split(' ')[2],
-                                        // @ts-ignore
-                                        protocol: document.querySelector('#protoahaha').innerText
                                     })
                                     // updatePatientActionCreator(patrick)
                                     dispatch({
@@ -115,11 +120,24 @@ const UserPage:FC=()=>{
                             </div>
                         </div>
                         <div style={{marginTop: 20}}>
-                            <h3>Protocol</h3>
-                            <p style={focused ? {borderRadius:5,border:'2px solid #ccc',outline:'none',transition:'all'} : {borderRadius:0}} contentEditable={focused} id={'protoahaha'}>
-                            {currentPatient.protocol}
-                        </p>
-
+                            <h2>Список заключень</h2>
+                            <div className={classes.conclusionsList}>
+                            {
+                                state.conclusions.map(conclusione=>{
+                                    return <div style={{
+                                    }} onDoubleClick={()=>{
+                                        getPatientInferenceByIdActionCreator(conclusione.id)
+                                        dispatch({
+                                            type:ActionTypes.SET_INFERENCE_WINDOW,
+                                            data:true
+                                        })
+                                    }
+                                    }>
+                                        <h4>Заключення {conclusione.id}</h4>
+                                    </div>
+                                })
+                            }
+                            </div>
                         </div>
 
 

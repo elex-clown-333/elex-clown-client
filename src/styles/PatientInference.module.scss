@@ -1,0 +1,393 @@
+.base{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  z-index: 100;
+  right: 0;
+
+  background: rgba(0,0,0,0.5);
+}
+@keyframes enlargement{
+  20%{
+    transform: scale(1.075);
+  }
+  40%{
+    transform:scale(0.925);
+  }
+  60%{
+    transform:scale(1.0375);
+  }
+  80%{
+    transform:scale(0.975);
+  }
+  100%{
+    transform:scale(1);
+  }
+}
+.close{
+  display: grid;
+
+  cursor: pointer;
+  position: absolute;
+  right:7.5px;
+  top: 7.5px;
+  border-radius:3px;
+  place-items: center;
+  transition: all .25s;
+  background: #ff0000;
+  box-shadow: 0 5px 0 0 hsl(hue(#ff0000),saturation(#ff0000),40%);
+  &:active{
+    transform: translateY(2px);
+    box-shadow: 0 3px 0 0 hsl(hue(#ff0000),saturation(#ff0000),40%);
+
+  }
+  &:hover > *{
+    transform: rotateZ(135deg);
+  }
+  >*{
+    font-size: 25px;
+    transform: rotateZ(45deg);
+    transition: transform .4s;
+    color: #fff;
+
+  }
+  width: 37.5px;
+  height: 35px;
+  margin-left: auto;
+}
+.creationBtn button{
+  border: unset;
+  cursor: pointer;
+  box-shadow: 0 5px 0 0 adjust-color(yellowgreen,$lightness:25%);
+  background: yellowgreen;
+  border-radius: 5px;
+  width: 125px;
+  transition: all .25s;
+  height:40px;
+  color: #fff;
+  position: relative;
+  i{
+    right: 20px;
+    position: absolute;
+    top:50%;
+    transition: transform .25s;
+    font-size: 17px;
+    transform: translateY(calc(-50% - 30px));
+
+  }
+  &:hover div{
+    margin-right: 20px;
+
+  }
+  &:hover i{
+    transform: translateY(-50%);
+  }
+  div{
+    transition: margin-right .25s;
+  }
+  &:active{
+    transform:translateY(3px);
+    box-shadow: 0 2px 0 0 adjust-color(yellowgreen,$lightness:25%) ;
+  }
+}
+.creationBtn{
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+input, textarea{
+  outline: none;
+}
+textarea{
+
+  svg{
+    width: 100%;
+    height: 100%;
+    rect{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  resize: vertical;
+  border: 1px solid dimgrey;
+  width: calc(100% - 40px);
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+  padding: 10px;
+  border-radius: 5px;
+  max-height: 150px;
+  min-height: 100px;
+
+}
+.deleteBtn{
+  width: 50px;
+  height: 40px;
+  margin-left: 50px;
+  transition: all .25s;
+  i{
+    transition: transform .25s;
+    position: absolute;
+    transform: translate(calc(-50% - 30px),-50%);
+    top:50%;
+    left:50%;
+  }
+  div{
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: transform .25s;
+
+  }
+  &:hover{
+    div{
+      transform: translateX(100%);
+    }
+    i{
+      transform: translate(-50%,-50%);
+    }
+  }
+  border:unset;
+  overflow: hidden;
+  border-radius: 5px;
+  color: #fff;
+  background: hsl(4,55%,51%);
+  box-shadow: 0 5px 0 0 hsl(4,55%,41%);
+  &:active{
+    box-shadow: 0 3px 0 0 hsl(4,55%,41%);
+    transform:translateY(2px);
+  }
+}
+.block{
+  transform: scale(0);
+  animation: enlargement .5s forwards;
+  .oxfordMedical{
+    user-select: none;
+    margin-left: 20px;
+    width: 200px;
+    height: 100px;
+    position: relative;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  position: relative;
+  width: 80%;
+  height: 90%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  .header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 180px;
+    border-bottom: 1px solid grey;
+  }
+  @keyframes shake {
+    25%{
+      transform: translateX(20px);
+    }
+    50%{
+      transform: translateX(-20px);
+    }
+    75%{
+      transform: translateX(20px);
+    }
+    100%{
+      transform: translateY(0);
+    }
+  }
+  .data{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .patientDescription{
+      textarea.shake{
+        animation: shake .25s forwards;
+      }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      >div h2{
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .yakasData{
+      margin-left: 20px;
+      padding-left: 10px;
+      margin-top: 10px;
+      width: 280px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap:10px;
+      justify-content: center;
+      min-height: 180px;
+      border: 2px solid grey;
+      .uselessData{
+        display: flex;
+        >div{
+          flex-grow: 1;
+        }
+      }
+    }
+  }
+
+
+}
+@keyframes divchik {
+  to{
+    transform: unset;
+  }
+}
+.editBtn{
+  display: flex;
+  height: 100%;
+  padding-left: 20px;
+  align-items: center;
+  .edit{
+    overflow: hidden;
+  }
+  &.focused{
+
+    .edit{
+      pointer-events: none;
+      opacity: 0;
+      z-index: 0;
+      div{
+        transform: translateY(-40px);
+      }
+    }
+    .cancel div,.save div{
+      animation: divchik .25s forwards .5s;
+    }
+    .save{
+      animation: Augh .25s forwards .5s, colorok .25s forwards .5s;
+
+    }
+    .cancel{
+      animation: Augh1 .25s forwards .5s;
+    }
+  }
+  .edit{
+    display: grid;
+    place-items:center;
+    div{
+      transition: transform .25s;
+    }
+  }
+  >div{
+    width: 200px;
+    display: grid;
+    place-items: center;
+    height: 100px;
+    margin-left: auto;
+    position: relative;
+  }
+  button{
+    border: unset;
+    position: absolute;
+    box-shadow: 0px 5px 0px 0px firebrick;
+  }
+  .save{
+
+    div{
+      transition: transform .25s 1s;
+      transform: translateY(-50px);
+    }
+    background:orangered ;
+    width: 50px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    transition: all .5s;
+    border-radius: 0px 5px 5px 0px;
+    overflow: hidden;
+    transform: translateX(25px);
+
+    i{
+      font-size: 21px;
+      position: absolute;
+      top:50%;
+      left: 50%;
+      transform: translate(calc(-50% + 35px) ,-50%);
+    }
+  }
+@keyframes Augh1 {
+  to{
+    transform: translateX(-37.5px);
+    border-radius: 5px;
+  }
+}
+  @keyframes Augh {
+    to{
+      transform: translateX(37.5px);
+      border-radius: 5px;
+    }
+  }
+  button{
+    cursor:pointer;
+  }
+  .cancel{
+    div{
+      transition: transform .25s 1s;
+      transform: translateY(-50px);
+    }
+
+    i{
+      font-size: 21px;
+      position: absolute;
+      left: 50%;
+      top:50%;
+      transform:translate(calc(-50% - 35px),-50%)
+    }
+    overflow: hidden;
+    border-radius: 5px 0 0 5px;
+    //animation: Augh1 .25s forwards 1s;
+    width: 50px;
+    color: #fff;
+    transform: translateX(-25px);
+
+    height: 40px;
+    background: orangered;
+  }
+
+  .edit{
+    z-index: 1;
+    cursor: pointer;
+    background: orangered;
+    width:100px;
+    color: #fff;
+    position: absolute;
+    height: 40px;
+    border-radius:5px;
+    box-shadow: 0px 5px 0px 0px firebrick;
+    transition: all .25s;
+    &:active{
+      transform: translateY(2px);
+      box-shadow: 0 3px 0 0 firebrick;
+    }
+  }
+
+}
+@keyframes colorok {
+  to{
+    background: #6054ff;
+    box-shadow: 0 5px 0 0 hsl(hue(#6054ff),50%,40%)
+  }
+}
+.save:hover{
+  transform: translateY(2px);
+  box-shadow: 0 3px 0 0 hsl(hue(#6054ff),50%,40%)
+}
+

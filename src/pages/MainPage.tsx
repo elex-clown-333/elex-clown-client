@@ -4,6 +4,7 @@ import PatientsList from "../components/PatientsList";
 import AddPatientForm from "../components/AddPatientForm";
 import {useTypedSelector} from "../hooks/useTypedSelector";
 import UserPage from "./UserPage";
+import PatientInference from "../components/PatientInference";
 const MainPage = () => {
     const state = useTypedSelector(state=>state.mainReducer)
     return (
@@ -14,6 +15,10 @@ const MainPage = () => {
                 state.isVisible && <AddPatientForm/>
             }
             <UserPage/>
+            {
+                state.isVisibleInferenceWindow
+                && <PatientInference/>
+            }
         </React.Fragment>
     );
 };

@@ -1,10 +1,11 @@
-import React, {ChangeEvent, useState,MouseEvent} from 'react';
+import React, {ChangeEvent, useState, MouseEvent, useEffect} from 'react';
 import classes from '../styles/PatientForm.module.scss'
 import classes2 from '../styles/MaterialInput.module.scss'
 import MaterialInput from "./UI/MaterialInput";
 import {ActionTypes, IFormData, IPropsInput} from "../types/types";
 import {useDispatch} from "react-redux";
 import {useActions} from "../hooks/useActions";
+import {FormControlLabel, Radio, RadioGroup} from "@mui/material";
 const AddPatientForm = () => {
     const {addPatientActionCreator} = useActions()
     let [formData,setFormData] = useState<IFormData>({
@@ -13,7 +14,12 @@ const AddPatientForm = () => {
         middleName:'',
         lastName:'',
         firstName:'',
+        sex:'Чоловіча'
     })
+    useEffect(()=>{
+        console.log(formData.sex)
+    })
+
     let [radios,setRadios] = useState<Array<{color:string}>>([
         {
             color:'lightgreen'
@@ -91,6 +97,13 @@ const AddPatientForm = () => {
                         residence:e.target.value
                     })
                 } as IPropsInput}></MaterialInput>
+            </div>
+            <div id={'hrin hrin1 hrin2'} style={{display:'flex',justifyContent:'center'}}>
+                <RadioGroup style={{display:"flex",justifyContent:"center"}} row={true}>
+                    <FormControlLabel value="male" control={<Radio checked={formData.sex == 'Чоловіча'} onChange={()=>{setFormData({...formData,sex:'Чоловіча'})}} />} label="Чоловіча" />
+                <FormControlLabel value="female" control={<Radio checked={formData.sex == 'Жіноча'} onChange={()=>{setFormData({...formData,sex:'Жіноча'})}} />} label="Жіноча" />
+
+                </RadioGroup>
             </div>
             <button className={classes.addPatientBtn} onClick={function(e:MouseEvent<HTMLButtonElement>){
                 e.preventDefault()

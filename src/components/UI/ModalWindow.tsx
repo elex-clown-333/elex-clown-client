@@ -4,7 +4,7 @@ const ModalWindow:FC = function({isVisible,setIsVisible,fn}:any){
     return (
         <div className={classes.base}>
             <div>
-                <h3 style={{width:'70%'}}>Це скасує всі ваші зміни. Ви впевнені?</h3>
+                <h3 style={{textAlign:'center',width:'70%'}}>Це скасує всі ваші зміни. Ви впевнені?</h3>
                 <div>
                 <button onClick={fn}>Так</button>
                 <button onClick={()=>setIsVisible(false)}>Ні</button>

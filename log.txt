@@ -1,0 +1,312 @@
+[32m[Nest] 74199  - [39m01/17/2023, 6:15:03 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 74199  - [39m01/17/2023, 6:15:03 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +61ms[39m
+[32m[Nest] 74199  - [39m01/17/2023, 6:15:03 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 74199  - [39m01/17/2023, 6:15:03 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +13ms[39m
+[32m[Nest] 74199  - [39m01/17/2023, 6:15:03 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 74199  - [39m01/17/2023, 6:15:03 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 74199  - [39m01/17/2023, 6:15:03 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConclusionsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 74199  - [39m01/17/2023, 6:15:03 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPatientsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 74199  - [39m01/17/2023, 6:15:03 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 74199  - [39m01/17/2023, 6:15:03 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 74199  - [39m01/17/2023, 6:15:03 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mPatientsController {/patients}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 74199  - [39m01/17/2023, 6:15:03 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 74199  - [39m01/17/2023, 6:15:03 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 74199  - [39m01/17/2023, 6:15:03 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 74199  - [39m01/17/2023, 6:15:03 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 74199  - [39m01/17/2023, 6:15:03 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, DELETE} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 74199  - [39m01/17/2023, 6:15:03 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/upload, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 74199  - [39m01/17/2023, 6:15:03 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mConclusionsController {/conclusions}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 74199  - [39m01/17/2023, 6:15:03 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 74199  - [39m01/17/2023, 6:15:03 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 74199  - [39m01/17/2023, 6:15:03 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 74199  - [39m01/17/2023, 6:15:03 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 74199  - [39m01/17/2023, 6:15:03 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 74199  - [39m01/17/2023, 6:15:03 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+[32m[Nest] 76264  - [39m01/17/2023, 6:15:04 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 76264  - [39m01/17/2023, 6:15:04 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +38ms[39m
+[32m[Nest] 76264  - [39m01/17/2023, 6:15:04 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 76264  - [39m01/17/2023, 6:15:04 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +16ms[39m
+[32m[Nest] 76264  - [39m01/17/2023, 6:15:04 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 76264  - [39m01/17/2023, 6:15:04 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 76264  - [39m01/17/2023, 6:15:04 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConclusionsModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 76264  - [39m01/17/2023, 6:15:04 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPatientsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 76264  - [39m01/17/2023, 6:15:04 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 76264  - [39m01/17/2023, 6:15:04 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 76264  - [39m01/17/2023, 6:15:04 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mPatientsController {/patients}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 76264  - [39m01/17/2023, 6:15:04 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 76264  - [39m01/17/2023, 6:15:04 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 76264  - [39m01/17/2023, 6:15:04 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 76264  - [39m01/17/2023, 6:15:04 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 76264  - [39m01/17/2023, 6:15:04 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 76264  - [39m01/17/2023, 6:15:04 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/upload, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 76264  - [39m01/17/2023, 6:15:04 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mConclusionsController {/conclusions}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 76264  - [39m01/17/2023, 6:15:04 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 76264  - [39m01/17/2023, 6:15:04 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 76264  - [39m01/17/2023, 6:15:04 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 76264  - [39m01/17/2023, 6:15:04 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 76264  - [39m01/17/2023, 6:15:04 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, PATCH} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 76264  - [39m01/17/2023, 6:15:04 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+[32m[Nest] 80405  - [39m01/17/2023, 6:15:05 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 80405  - [39m01/17/2023, 6:15:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +36ms[39m
+[32m[Nest] 80405  - [39m01/17/2023, 6:15:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 80405  - [39m01/17/2023, 6:15:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +10ms[39m
+[32m[Nest] 80405  - [39m01/17/2023, 6:15:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 80405  - [39m01/17/2023, 6:15:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 80405  - [39m01/17/2023, 6:15:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConclusionsModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 80405  - [39m01/17/2023, 6:15:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPatientsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 80405  - [39m01/17/2023, 6:15:05 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 80405  - [39m01/17/2023, 6:15:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 80405  - [39m01/17/2023, 6:15:05 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mPatientsController {/patients}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 80405  - [39m01/17/2023, 6:15:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 80405  - [39m01/17/2023, 6:15:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 80405  - [39m01/17/2023, 6:15:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 80405  - [39m01/17/2023, 6:15:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, PATCH} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 80405  - [39m01/17/2023, 6:15:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 80405  - [39m01/17/2023, 6:15:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/upload, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 80405  - [39m01/17/2023, 6:15:05 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mConclusionsController {/conclusions}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 80405  - [39m01/17/2023, 6:15:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 80405  - [39m01/17/2023, 6:15:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 80405  - [39m01/17/2023, 6:15:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 80405  - [39m01/17/2023, 6:15:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 80405  - [39m01/17/2023, 6:15:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 80405  - [39m01/17/2023, 6:15:05 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+[32m[Nest] 84540  - [39m01/17/2023, 6:15:06 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 84540  - [39m01/17/2023, 6:15:06 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +37ms[39m
+[32m[Nest] 84540  - [39m01/17/2023, 6:15:06 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 84540  - [39m01/17/2023, 6:15:06 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +11ms[39m
+[32m[Nest] 84540  - [39m01/17/2023, 6:15:06 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 84540  - [39m01/17/2023, 6:15:06 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 84540  - [39m01/17/2023, 6:15:06 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConclusionsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 84540  - [39m01/17/2023, 6:15:06 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPatientsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 84540  - [39m01/17/2023, 6:15:06 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +3ms[39m
+[32m[Nest] 84540  - [39m01/17/2023, 6:15:06 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 84540  - [39m01/17/2023, 6:15:06 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mPatientsController {/patients}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 84540  - [39m01/17/2023, 6:15:06 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 84540  - [39m01/17/2023, 6:15:06 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 84540  - [39m01/17/2023, 6:15:06 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 84540  - [39m01/17/2023, 6:15:06 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, PATCH} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 84540  - [39m01/17/2023, 6:15:06 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 84540  - [39m01/17/2023, 6:15:06 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/upload, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 84540  - [39m01/17/2023, 6:15:06 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mConclusionsController {/conclusions}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 84540  - [39m01/17/2023, 6:15:06 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 84540  - [39m01/17/2023, 6:15:06 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 84540  - [39m01/17/2023, 6:15:06 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 84540  - [39m01/17/2023, 6:15:06 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 84540  - [39m01/17/2023, 6:15:06 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 84540  - [39m01/17/2023, 6:15:06 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+[32m[Nest] 88688  - [39m01/17/2023, 6:15:07 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 88688  - [39m01/17/2023, 6:15:07 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +40ms[39m
+[32m[Nest] 88688  - [39m01/17/2023, 6:15:07 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 88688  - [39m01/17/2023, 6:15:07 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +10ms[39m
+[32m[Nest] 88688  - [39m01/17/2023, 6:15:07 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 88688  - [39m01/17/2023, 6:15:07 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 88688  - [39m01/17/2023, 6:15:07 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConclusionsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 88688  - [39m01/17/2023, 6:15:07 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPatientsModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 88688  - [39m01/17/2023, 6:15:07 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 88688  - [39m01/17/2023, 6:15:07 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 88688  - [39m01/17/2023, 6:15:07 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mPatientsController {/patients}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 88688  - [39m01/17/2023, 6:15:07 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 88688  - [39m01/17/2023, 6:15:07 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 88688  - [39m01/17/2023, 6:15:07 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 88688  - [39m01/17/2023, 6:15:07 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 88688  - [39m01/17/2023, 6:15:07 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, DELETE} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 88688  - [39m01/17/2023, 6:15:07 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/upload, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 88688  - [39m01/17/2023, 6:15:07 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mConclusionsController {/conclusions}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 88688  - [39m01/17/2023, 6:15:07 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 88688  - [39m01/17/2023, 6:15:07 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 88688  - [39m01/17/2023, 6:15:07 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 88688  - [39m01/17/2023, 6:15:07 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, PATCH} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 88688  - [39m01/17/2023, 6:15:07 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 88688  - [39m01/17/2023, 6:15:07 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+[32m[Nest] 93181  - [39m01/17/2023, 6:15:35 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 93181  - [39m01/17/2023, 6:15:36 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +65ms[39m
+[32m[Nest] 93181  - [39m01/17/2023, 6:15:36 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 93181  - [39m01/17/2023, 6:15:36 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +13ms[39m
+[32m[Nest] 93181  - [39m01/17/2023, 6:15:36 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 93181  - [39m01/17/2023, 6:15:36 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 93181  - [39m01/17/2023, 6:15:36 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConclusionsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 93181  - [39m01/17/2023, 6:15:36 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPatientsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 93181  - [39m01/17/2023, 6:15:36 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 93181  - [39m01/17/2023, 6:15:36 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 93181  - [39m01/17/2023, 6:15:36 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mPatientsController {/patients}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 93181  - [39m01/17/2023, 6:15:36 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 93181  - [39m01/17/2023, 6:15:36 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 93181  - [39m01/17/2023, 6:15:36 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 93181  - [39m01/17/2023, 6:15:36 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 93181  - [39m01/17/2023, 6:15:36 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, DELETE} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 93181  - [39m01/17/2023, 6:15:36 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/upload, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 93181  - [39m01/17/2023, 6:15:36 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mConclusionsController {/conclusions}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 93181  - [39m01/17/2023, 6:15:36 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 93181  - [39m01/17/2023, 6:15:36 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 93181  - [39m01/17/2023, 6:15:36 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 93181  - [39m01/17/2023, 6:15:36 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 93181  - [39m01/17/2023, 6:15:36 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 93181  - [39m01/17/2023, 6:15:36 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+[32m[Nest] 97327  - [39m01/17/2023, 6:15:37 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 97327  - [39m01/17/2023, 6:15:37 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +37ms[39m
+[32m[Nest] 97327  - [39m01/17/2023, 6:15:37 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 97327  - [39m01/17/2023, 6:15:37 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +10ms[39m
+[32m[Nest] 97327  - [39m01/17/2023, 6:15:37 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 97327  - [39m01/17/2023, 6:15:37 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 97327  - [39m01/17/2023, 6:15:37 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConclusionsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 97327  - [39m01/17/2023, 6:15:37 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPatientsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 97327  - [39m01/17/2023, 6:15:37 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 97327  - [39m01/17/2023, 6:15:37 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 97327  - [39m01/17/2023, 6:15:37 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mPatientsController {/patients}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 97327  - [39m01/17/2023, 6:15:37 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 97327  - [39m01/17/2023, 6:15:37 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 97327  - [39m01/17/2023, 6:15:37 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 97327  - [39m01/17/2023, 6:15:37 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 97327  - [39m01/17/2023, 6:15:37 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 97327  - [39m01/17/2023, 6:15:37 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/upload, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 97327  - [39m01/17/2023, 6:15:37 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mConclusionsController {/conclusions}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 97327  - [39m01/17/2023, 6:15:37 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 97327  - [39m01/17/2023, 6:15:37 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 97327  - [39m01/17/2023, 6:15:37 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 97327  - [39m01/17/2023, 6:15:37 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 97327  - [39m01/17/2023, 6:15:37 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 97327  - [39m01/17/2023, 6:15:37 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+[32m[Nest] 1724  - [39m01/17/2023, 6:15:38 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 1724  - [39m01/17/2023, 6:15:38 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +51ms[39m
+[32m[Nest] 1724  - [39m01/17/2023, 6:15:38 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 1724  - [39m01/17/2023, 6:15:38 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +10ms[39m
+[32m[Nest] 1724  - [39m01/17/2023, 6:15:38 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 1724  - [39m01/17/2023, 6:15:38 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 1724  - [39m01/17/2023, 6:15:38 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConclusionsModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 1724  - [39m01/17/2023, 6:15:38 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPatientsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 1724  - [39m01/17/2023, 6:15:38 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 1724  - [39m01/17/2023, 6:15:38 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 1724  - [39m01/17/2023, 6:15:38 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mPatientsController {/patients}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 1724  - [39m01/17/2023, 6:15:38 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 1724  - [39m01/17/2023, 6:15:38 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 1724  - [39m01/17/2023, 6:15:38 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 1724  - [39m01/17/2023, 6:15:38 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 1724  - [39m01/17/2023, 6:15:38 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, DELETE} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 1724  - [39m01/17/2023, 6:15:38 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/upload, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 1724  - [39m01/17/2023, 6:15:38 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mConclusionsController {/conclusions}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 1724  - [39m01/17/2023, 6:15:38 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 1724  - [39m01/17/2023, 6:15:38 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 1724  - [39m01/17/2023, 6:15:38 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 1724  - [39m01/17/2023, 6:15:38 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 1724  - [39m01/17/2023, 6:15:38 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 1724  - [39m01/17/2023, 6:15:38 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+[32m[Nest] 5864  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 5864  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +37ms[39m
+[32m[Nest] 5864  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 5864  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +10ms[39m
+[32m[Nest] 5864  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 5864  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 5864  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConclusionsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 5864  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPatientsModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 5864  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 5864  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 5864  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mPatientsController {/patients}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 5864  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 5864  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 5864  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 5864  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 5864  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, DELETE} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 5864  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/upload, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 5864  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mConclusionsController {/conclusions}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 5864  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 5864  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 5864  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 5864  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 5864  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 5864  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+[32m[Nest] 10006  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 10006  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +36ms[39m
+[32m[Nest] 10006  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 10006  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +9ms[39m
+[32m[Nest] 10006  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 10006  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 10006  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConclusionsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 10006  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPatientsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 10006  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 10006  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 10006  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mPatientsController {/patients}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 10006  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 10006  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 10006  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 10006  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 10006  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, DELETE} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 10006  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/upload, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 10006  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mConclusionsController {/conclusions}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 10006  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 10006  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 10006  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 10006  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 10006  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 10006  - [39m01/17/2023, 6:15:39 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+[32m[Nest] 14141  - [39m01/17/2023, 6:15:41 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 14141  - [39m01/17/2023, 6:15:41 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +92ms[39m
+[32m[Nest] 14141  - [39m01/17/2023, 6:15:41 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 14141  - [39m01/17/2023, 6:15:41 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +23ms[39m
+[32m[Nest] 14141  - [39m01/17/2023, 6:15:41 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 14141  - [39m01/17/2023, 6:15:41 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 14141  - [39m01/17/2023, 6:15:41 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConclusionsModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 14141  - [39m01/17/2023, 6:15:41 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPatientsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 14141  - [39m01/17/2023, 6:15:41 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +7ms[39m
+[32m[Nest] 14141  - [39m01/17/2023, 6:15:41 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +5ms[39m
+[32m[Nest] 14141  - [39m01/17/2023, 6:15:41 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mPatientsController {/patients}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 14141  - [39m01/17/2023, 6:15:41 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 14141  - [39m01/17/2023, 6:15:41 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 14141  - [39m01/17/2023, 6:15:41 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 14141  - [39m01/17/2023, 6:15:41 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 14141  - [39m01/17/2023, 6:15:41 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, DELETE} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 14141  - [39m01/17/2023, 6:15:41 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/upload, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 14141  - [39m01/17/2023, 6:15:41 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mConclusionsController {/conclusions}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 14141  - [39m01/17/2023, 6:15:41 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 14141  - [39m01/17/2023, 6:15:41 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 14141  - [39m01/17/2023, 6:15:41 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 14141  - [39m01/17/2023, 6:15:41 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, PATCH} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 14141  - [39m01/17/2023, 6:15:41 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 14141  - [39m01/17/2023, 6:15:41 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +4ms[39m
+[32m[Nest] 18302  - [39m01/17/2023, 6:15:42 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 18302  - [39m01/17/2023, 6:15:42 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +38ms[39m
+[32m[Nest] 18302  - [39m01/17/2023, 6:15:42 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 18302  - [39m01/17/2023, 6:15:42 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +10ms[39m
+[32m[Nest] 18302  - [39m01/17/2023, 6:15:42 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 18302  - [39m01/17/2023, 6:15:42 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 18302  - [39m01/17/2023, 6:15:42 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConclusionsModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 18302  - [39m01/17/2023, 6:15:42 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPatientsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 18302  - [39m01/17/2023, 6:15:42 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 18302  - [39m01/17/2023, 6:15:42 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 18302  - [39m01/17/2023, 6:15:42 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mPatientsController {/patients}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 18302  - [39m01/17/2023, 6:15:42 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 18302  - [39m01/17/2023, 6:15:42 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 18302  - [39m01/17/2023, 6:15:42 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 18302  - [39m01/17/2023, 6:15:42 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 18302  - [39m01/17/2023, 6:15:42 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, DELETE} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 18302  - [39m01/17/2023, 6:15:42 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/upload, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 18302  - [39m01/17/2023, 6:15:42 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mConclusionsController {/conclusions}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 18302  - [39m01/17/2023, 6:15:42 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 18302  - [39m01/17/2023, 6:15:42 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 18302  - [39m01/17/2023, 6:15:42 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 18302  - [39m01/17/2023, 6:15:42 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 18302  - [39m01/17/2023, 6:15:42 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 18302  - [39m01/17/2023, 6:15:42 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+[32m[Nest] 23181  - [39m01/17/2023, 6:16:40 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 23181  - [39m01/17/2023, 6:16:40 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +59ms[39m
+[32m[Nest] 23181  - [39m01/17/2023, 6:16:40 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 23181  - [39m01/17/2023, 6:16:40 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +10ms[39m
+[32m[Nest] 23181  - [39m01/17/2023, 6:16:40 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 23181  - [39m01/17/2023, 6:16:40 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 23181  - [39m01/17/2023, 6:16:40 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConclusionsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 23181  - [39m01/17/2023, 6:16:40 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPatientsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 23181  - [39m01/17/2023, 6:16:40 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 23181  - [39m01/17/2023, 6:16:40 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 23181  - [39m01/17/2023, 6:16:40 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mPatientsController {/patients}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 23181  - [39m01/17/2023, 6:16:40 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 23181  - [39m01/17/2023, 6:16:40 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 23181  - [39m01/17/2023, 6:16:40 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 23181  - [39m01/17/2023, 6:16:40 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, PATCH} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 23181  - [39m01/17/2023, 6:16:40 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 23181  - [39m01/17/2023, 6:16:40 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/patients/upload, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 23181  - [39m01/17/2023, 6:16:40 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mConclusionsController {/conclusions}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 23181  - [39m01/17/2023, 6:16:40 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 23181  - [39m01/17/2023, 6:16:40 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 23181  - [39m01/17/2023, 6:16:40 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 23181  - [39m01/17/2023, 6:16:40 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 23181  - [39m01/17/2023, 6:16:40 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/conclusions/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 23181  - [39m01/17/2023, 6:16:40 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
