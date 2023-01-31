@@ -15,10 +15,11 @@ app.use('/patients', require('./routes').patients);
 app.use('/conclusions', require('./routes').conclusions);
 
 async function start() {
-    await sequelize.sync();
-    app.listen(6969,() => {
-        console.log(`Example app listening on port 6969`)
+    console.log(`Example app preparing to start listening on port 6969`)
+    app.listen(6969, async () => {
         initAll(sequelize)
+        await sequelize.sync();
+        console.log(`Example app listening on port 6969`)
     })
 }
 

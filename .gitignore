@@ -1,4 +1,5 @@
 node_modules
 dist
 medapp-darwin-arm64
-
+medapp-win32-x64.zip
+medapp-win32-x64

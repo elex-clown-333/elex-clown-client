@@ -33,14 +33,14 @@ const PatientInference:FC = () => {
 
                     }
                     else if (isVisible2) {
-                            console.log(focused)
-                            dispatch({type: ActionTypes.SET_INFERENCE_WINDOW, data: false})
-                            dispatch({
-                                type: ActionTypes.GET_INFERENCE,
-                                data: null
-                            })
-                            setIsVisible(false)
-                            setIsVisible2(false)
+                        console.log(focused)
+                        dispatch({type: ActionTypes.SET_INFERENCE_WINDOW, data: false})
+                        dispatch({
+                            type: ActionTypes.GET_INFERENCE,
+                            data: null
+                        })
+                        setIsVisible(false)
+                        setIsVisible2(false)
 
 
                     }
@@ -58,8 +58,14 @@ const PatientInference:FC = () => {
                         <div className={classes.block}>
 
                             <div className={classes.header}>
-                                <div className={classes.oxfordMedical}><img
-                                    src={'https://oxford-med.com.ua/assets/img/icon/logo.svg'}/></div>
+                                {/*<div className={classes.oxfordMedical}><img*/}
+                                {/*    src={'https://oxford-med.com.ua/assets/img/icon/logo.svg'}/></div>*/}
+                                <div className={classes.oxfordMedical}>
+                                    <i>Обласне комунальне некомерційне підприємство</i>
+                                    <b>Чернівецький обласний ендокринологічний центр</b>
+                                    <div>Вул. Федьковича 50 м. Чернівці, 58001, тел. (0372)53-63-61</div>
+                                    <div><div>E-mail: oblendo@med.cv.ua</div><div>Код ЄДРПО:</div></div>
+                                </div>
                                 <div onClick={() => {
                                     if(focused) {
                                         setIsVisible2(true)
@@ -121,7 +127,7 @@ const PatientInference:FC = () => {
                                         }} className={classes.cancel}><div>Cancel</div><i className='bx bx-x'></i></button>
                                     </div>
                                     <button onClick={()=>{
-                                       setIsVisible(true)
+                                        setIsVisible(true)
                                         setIsVisible1(true)
                                     }
                                     } className={classes.deleteBtn}>
@@ -143,72 +149,72 @@ const PatientInference:FC = () => {
                             </div>
                         </div>
                     </div>
-                : <div className={classes.base}>
-                    <div className={classes.block}>
+                    : <div className={classes.base}>
+                        <div className={classes.block}>
 
-                        <div className={classes.header}>
-                            <div className={classes.oxfordMedical}>
-                                <i>Обласне комунальне некомерційне підприємство</i>
-                                <b>Чернівецький обласний ендокринологічний центр</b>
-                                <div>Вул. Федьковича 50 м. Чернівці, 58001, тел. (0372)53-63-61</div>
-                                <div><div>E-mail: oblendo@med.cv.ua</div><div>Код ЄДРПО:</div></div>
-                            </div>
-                            <div onClick={() => dispatch({type: ActionTypes.SET_INFERENCE_WINDOW, data: false})}
-                                 className={classes.close}>
-                                <span>+</span>
-                            </div>
-                        </div>
-                        <div className={classes.data}>
-                            <div className={classes.yakasData}>
-                                <div>Дата:<span>{new Date().getDate()}.{(new Date().getMonth() + 1) > 9 ? new Date().getMonth() + 1 : '0' + (new Date().getMonth() + 1).toString()}.{new Date().getFullYear()}</span>
+                            <div className={classes.header}>
+                                <div className={classes.oxfordMedical}>
+                                    <i>Обласне комунальне некомерційне підприємство</i>
+                                    <b>Чернівецький обласний ендокринологічний центр</b>
+                                    <div>Вул. Федьковича 50 м. Чернівці, 58001, тел. (0372)53-63-61</div>
+                                    <div><div>E-mail: oblendo@med.cv.ua</div><div>Код ЄДРПО:</div></div>
                                 </div>
-                                <div>Історія N:<span>{num}</span></div>
-                                <div>ПІБ: <span>{state.currentPatient.lastName + ' ' + state.currentPatient.firstName + ' ' + state.currentPatient.middleName}</span>
-                                </div>
-                                <div>Дата народження: <span>{state.currentPatient.dateOfBirth}</span></div>
-                                <div className={classes.uselessData}>
-                                    <div className={classes.age}>Вік:<span>n poків</span></div>
-                                    <div className={classes.sex}>Стать:<span>{state.currentPatient.sex}</span></div>
+                                <div onClick={() => dispatch({type: ActionTypes.SET_INFERENCE_WINDOW, data: false})}
+                                     className={classes.close}>
+                                    <span>+</span>
                                 </div>
                             </div>
-                            <div className={classes.patientDescription}>
-                                <div>
-                                    <h2 style={{margin: '15px 0px'}}>Заключення</h2>
+                            <div className={classes.data}>
+                                <div className={classes.yakasData}>
+                                    <div>Дата:<span>{new Date().getDate()}.{(new Date().getMonth() + 1) > 9 ? new Date().getMonth() + 1 : '0' + (new Date().getMonth() + 1).toString()}.{new Date().getFullYear()}</span>
+                                    </div>
+                                    <div>Історія N:<span>{num}</span></div>
+                                    <div>ПІБ: <span>{state.currentPatient.lastName + ' ' + state.currentPatient.firstName + ' ' + state.currentPatient.middleName}</span>
+                                    </div>
+                                    <div>Дата народження: <span>{state.currentPatient.dateOfBirth}</span></div>
+                                    <div className={classes.uselessData}>
+                                        <div className={classes.age}>Вік:<span>n poків</span></div>
+                                        <div className={classes.sex}>Стать:<span>{state.currentPatient.sex}</span></div>
+                                    </div>
                                 </div>
-                                <textarea value={inference} onChange={e => {
-                                    setInference(e.target.value)
-                                }}>
+                                <div className={classes.patientDescription}>
+                                    <div>
+                                        <h2 style={{margin: '15px 0px'}}>Заключення</h2>
+                                    </div>
+                                    <textarea value={inference} onChange={e => {
+                                        setInference(e.target.value)
+                                    }}>
 
                 </textarea>
-                            </div>
-                            <div style={{marginLeft: 20}} className={classes.creationBtn}>
-                                <button style={{marginLeft:30}} onClick={() => {
-                                    if(inference.length==0){
-                                        return new Promise((resolve)=>{
-                                            document.querySelector(`.${classes.patientDescription} textarea`).classList.add(classes.shake)
-                                            setTimeout(()=>{
-                                                resolve(null)
-                                            },250)
-                                        }).then(data=>{
-                                            document.querySelector(`.${classes.patientDescription} textarea`).classList.remove(classes.shake)
+                                </div>
+                                <div style={{marginLeft: 20}} className={classes.creationBtn}>
+                                    <button style={{marginLeft:30}} onClick={() => {
+                                        if(inference.length==0){
+                                            return new Promise((resolve)=>{
+                                                document.querySelector(`.${classes.patientDescription} textarea`).classList.add(classes.shake)
+                                                setTimeout(()=>{
+                                                    resolve(null)
+                                                },250)
+                                            }).then(data=>{
+                                                document.querySelector(`.${classes.patientDescription} textarea`).classList.remove(classes.shake)
+                                            })
+                                        }
+                                        addPatientInferenceActionCreator(state.currentPatient.id, {
+                                            data: inference,
+                                            date: new Date().getDate().toString() + '.' + new Date().getMonth().toString() + '.' + new Date().getFullYear(),
+                                            historyNumber: num,
                                         })
-                                    }
-                                    addPatientInferenceActionCreator(state.currentPatient.id, {
-                                        data: inference,
-                                        date: new Date().getDate().toString() + '.' + new Date().getMonth().toString() + '.' + new Date().getFullYear(),
-                                        historyNumber: num,
-                                    })
-                                    dispatch({
-                                        type:ActionTypes.SET_INFERENCE_WINDOW,
-                                        data:false
-                                    })
-                                }}>
-                                    <div>Створити</div>
-                                    <i className='bx bx-cloud-upload'></i></button>
+                                        dispatch({
+                                            type:ActionTypes.SET_INFERENCE_WINDOW,
+                                            data:false
+                                        })
+                                    }}>
+                                        <div>Створити</div>
+                                        <i className='bx bx-cloud-upload'></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
             }
         </>
     )

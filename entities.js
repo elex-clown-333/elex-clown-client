@@ -1,6 +1,7 @@
-const {Model, DataTypes,Sequelize} = require("sequelize");
+const {Model, DataTypes} = require("sequelize");
 
 class Patient extends Model {}
+
 class Conclusion extends Model {}
 
 const initAll = (sequelize) => {
