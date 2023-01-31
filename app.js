@@ -12,8 +12,12 @@ const {
     Notification,
     contextBridge
 } = require('electron')
-let {exec} = require('child_process')
-exec('node elex-hrin/dist/main.js')
+const {start} = require("./index");
+const fs = require("fs");
+// let hrin = require('./aaa')
+// hrin()
+
+
 app.on('ready', async function () {
     try {
             let mainWindow = new BrowserWindow({
@@ -23,6 +27,7 @@ app.on('ready', async function () {
                 minHeight: 572,
                 // icon: 'med-logo.ico'
             })
+
             app.setName('Elex')
             // let appIcon = nativeImage.createFromPath(__dirname + '/' + 'med_logo.png')
             // mainWindow.setIcon(appIcon)
@@ -56,6 +61,8 @@ app.on('ready', async function () {
             // ]))
             // mainWindow.setOverlayIcon('./src/assets/med_logo.jpeg')
         mainWindow.loadFile('animation/index.html')
+        start()
+        // fs.writeFileSync('log.log', 'NOT STARTED ON 6969');
             setTimeout(() => {
                 mainWindow.loadFile('./public/index.html')
             }, 5000)
@@ -76,3 +83,4 @@ app.on('ready', async function () {
         //     console.log('blurred')
         // })
     })
+

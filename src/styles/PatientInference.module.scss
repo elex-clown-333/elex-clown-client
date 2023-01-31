@@ -164,17 +164,7 @@ textarea{
 .block{
   transform: scale(0);
   animation: enlargement .5s forwards;
-  .oxfordMedical{
-    user-select: none;
-    margin-left: 20px;
-    width: 200px;
-    height: 100px;
-    position: relative;
-    img{
-      width: 100%;
-      height: 100%;
-    }
-  }
+
   position: relative;
   width: 80%;
   height: 90%;
@@ -183,6 +173,19 @@ textarea{
   flex-direction: column;
   border-radius: 10px;
   .header{
+    .oxfordMedical{
+      display:flex;
+      flex-direction: column;
+      gap:15px;
+      margin: 25px 0;
+      >*{
+        white-space: nowrap;
+        display: flex;
+        justify-content: center;
+        gap:50px;
+      }
+    }
+    justify-content: center;
     display: flex;
     align-items: center;
     width: 100%;

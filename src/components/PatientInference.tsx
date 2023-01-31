@@ -147,8 +147,12 @@ const PatientInference:FC = () => {
                     <div className={classes.block}>
 
                         <div className={classes.header}>
-                            <div className={classes.oxfordMedical}><img
-                                src={'https://oxford-med.com.ua/assets/img/icon/logo.svg'}/></div>
+                            <div className={classes.oxfordMedical}>
+                                <i>Обласне комунальне некомерційне підприємство</i>
+                                <b>Чернівецький обласний ендокринологічний центр</b>
+                                <div>Вул. Федьковича 50 м. Чернівці, 58001, тел. (0372)53-63-61</div>
+                                <div><div>E-mail: oblendo@med.cv.ua</div><div>Код ЄДРПО:</div></div>
+                            </div>
                             <div onClick={() => dispatch({type: ActionTypes.SET_INFERENCE_WINDOW, data: false})}
                                  className={classes.close}>
                                 <span>+</span>
